@@ -39,7 +39,7 @@ params:
 
   # main section will be listed at index page
   mainSections:
-    - posts
+    - resumenes
   
   # set number of post of specify type of content
   pageSize:
@@ -67,9 +67,9 @@ params:
 
 menu:
   main:
-    - identifier: posts
+    - identifier: resumenes
       name: resumenes
-      url: posts/
+      url: resumenes/
       weight: 1
     - identifier: tags
       name: asignaturas
