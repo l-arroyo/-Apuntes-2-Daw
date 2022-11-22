@@ -71,7 +71,7 @@ menu:
       name: resumenes
       url: resumenes/
       weight: 1
-    - identifier: tags
+    - identifier: asignaturas
       name: asignaturas
       url: tags/
       weight: 2
