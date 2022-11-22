@@ -80,9 +80,9 @@ menu:
       url: about/
       weight: 3
   footer:
-    - identifier: twitter
-      url: "https://twitter.com/gohugoio"
-      name: Twitter
+    - identifier: linkedin
+      url: "https://www.linkedin.com/in/lucas-arroyo-artiach-174a28196/"
+      name: LinkedIn
     - identifier: github
       url: "https://github.com/l-arroyo"
       name: Github

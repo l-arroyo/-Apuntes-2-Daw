@@ -71,4 +71,62 @@ Si una versión concreta de un archivo está almacenada en el **directorio de Gi
 
 ## Flujo de trabajo en Git
 
-Estos son los **comandos básicos de Git** necesarios para hacer la gran mayoría de acciones trabajando con Git.
+### Configuración inicial
+
+Cuando instalamos Git debemos **establecer un nombre de usuario y una dirección de correo**. Para ello ejecutaremos los siguientes comandos:
+
+`$ git config --global user.name "Nombre Usuario"`
+`$ git config --global user.email "usuario@gmail.com"`
+
+Con el parámetro `--global`, especificamos que Git utilice esta información para todo lo que hagamos en el sistema. Para modificar esta información en un proyecto concreto, podemos ejecutar de nuevo el comando sin este parámetro.
+
+Podemos escoger el editor que se utilizará cuando tengamos que introducir un mensaje. Por defecto Git utilizará el editor predeterminado en el sistema *(generalmente Vi)*. Para **cambiar de editor** podemos ejecutar los siguientes comandos, dependiendo de nuestro gusto:
+
+~~~
+$ git config --global core.editor nano
+$ git config --global core.editor gedit
+$ git config --global core.editor vscode --wait
+$ git config --global core.editor emacs
+~~~
+
+Para **listar las propiedades que Git ha configurado** empleamos el siguiete comando:
+
+`$ git config --list`
+
+Si necesitamos leer el manual de algún comando de Git tenemos diferentes opciones:
+
+~~~
+$ git help <comando>
+$ git <comando> --help
+$ man git-<comando>
+~~~
+
+### Comandos básicos
+
+Estos son los **comandos básicos de Git** necesarios para hacer la gran mayoría de acciones trabajando con Git:
+
+Hay dos formas para obtener un repositorio Git:
+
+1. **Tomar un proyecto o directorio existente e importarlo en Git** 
+
+Para ello, nos situamos en el directorio raíz del proyecto que queremos importar y ejecutamos:
+
+`$ git init`
+
+Se creará un subdirectorio llamado .git con los archivos necesarios y de este modo, habremos **inicializado un repositorio local**.
+
+2. **Clonar un repositorio existente desde otro servidor**
+
+Para obtener una copia de un repositorio Git existente almacenado en un servidor para, por ejemplo, contribuir en él, necesitaremos el siguiente comando:
+
+`$ git clone https://github.com/repositorio`
+
+Al ejecutarlo, obtendremos un nuevo directorio con una **copia idéntica de casi todos los datos contenidos en el servidor**, incluídas **todas las versiones de los archivos** en la historia del proyecto.
+
+Si queremos **especificar un nombre** para el directorio de destino, añadiremos al final de la sentencia el nombre del mismo:
+
+`$ git clone https://github.com/repositorio Proyecto`
+
+En lugar de utilizar transferencias por `https://` podemos emplear el protocolo `git://` o ssh mediante la sintaxis `usuario@servidor:ruta/repositorio.git`
+
+Para **confirmar los cambios** que hemos realizado y confirmar sus instantáneas en la base de datos local de Git
